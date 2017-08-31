@@ -11,7 +11,7 @@ public class DecoratorApplication {
 
 		House woodHouse = new WoodHouse();
 
-		woodHouse = new Balcony(woodHouse);
+		woodHouse = new Balcony(new Balcony(new Balcony(woodHouse)));
 		woodHouse = new Balcony(woodHouse);
 
 		System.out.println("House costs: $" +  woodHouse.getCost());
